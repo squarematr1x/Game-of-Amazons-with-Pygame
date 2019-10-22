@@ -9,3 +9,6 @@ Programming [two player strategy game](https://en.wikipedia.org/wiki/Game_of_the
 
 ## One possible state of the game
 ![One possible state of the game](https://github.com/squarematr1x/Game-of-Amazons-with-Pygame/blob/master/screenshots/screenshot2.png)
+
+## Deciding where to shoot with white amazon
+![Deciding where to shoot with white amazon](https://github.com/squarematr1x/Game-of-Amazons-with-Pygame/blob/master/screenshots/screenshot3.PNG)
