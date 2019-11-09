@@ -11,6 +11,10 @@ class Board:
         self.dead_white = pygame.image.load(r'pictures/dead_white_piece.png')
         self.dead_black = pygame.image.load(r'pictures/dead_black_piece.png')
         self.first_move = pygame.image.load(r'pictures/first_move.png')
+        self.board_col1 = (190, 160, 160)
+        self.board_col2 = (225, 204, 153)
+        self.board_col3 = (126, 96, 96)
+        self.board_col4 = (204, 102, 0)
 
     def get_board(self):
         return self.board
@@ -80,14 +84,14 @@ class Board:
             for j in range(height // 5):
                 if (i + j) % 2 == 0:
                     if board[i][j] != "" and self.illegals(board, width, height) > 0:
-                        color = (190, 160, 160)
+                        color = self.board_col1
                     else:
-                        color = (225, 204, 153)
+                        color = self.board_col2
                 else:
                     if board[i][j] != "" and self.illegals(board, width, height) > 0:
-                        color = (126, 96, 96)
+                        color = self.board_col3
                     else:
-                        color = (204, 102, 0)
+                        color = self.board_col4
 
                 pygame.draw.rect(screen, color, [(margin + width) * j + margin,
                                                  (margin + height) * i + margin, width, height])

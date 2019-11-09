@@ -198,7 +198,7 @@ class AI:
 
         coordinates = self.find_amazon_coordinates(board, amazon_color)
         moves = defaultdict(list)
-        max_eval = 5
+        max_eval = 4
 
         for territory in range(1, max_eval):
             for x, y in coordinates.items():
