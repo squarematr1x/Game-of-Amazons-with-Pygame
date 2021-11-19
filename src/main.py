@@ -26,7 +26,7 @@ pygame.init()
 WINDOW_SIZE = [10 * WIDTH + 11 * MARGIN, 10 * HEIGHT + 11 * MARGIN]
 screen = pygame.display.set_mode(WINDOW_SIZE)
 pygame.display.set_caption("Game of Amazons")
-intro_screen = pygame.image.load(r'pictures/intro_screen.png')
+intro_screen = pygame.image.load(r'pieces/intro_screen.png')
 clock = pygame.time.Clock()
 
 
@@ -78,7 +78,8 @@ def is_finished(current_board, player_vs_player):
                             f'\nBlack: {amazons.get_black_wins()}')
         sleep(0.75)
         board.initialize_board(current_board)
-        board.draw_board(current_board, WIDTH, HEIGHT, MARGIN, screen, amazons.get_turn(), player_vs_player)
+        board.draw_board(current_board, WIDTH, HEIGHT, MARGIN,
+                         screen, amazons.get_turn(), player_vs_player)
 
 
 def game_intro():
@@ -94,9 +95,12 @@ def game_intro():
         screen.fill((0, 0, 0))
         screen.blit(intro_screen, (0, 0))
 
-        button((WIDTH * 10 + 11) / 2 - 85, 250, 170, 50, BROWN, LIGHT_BROWN, "Player vs. Player", True, game_loop)
-        button((WIDTH * 10 + 11)/2 - 75, 350, 150, 50, BROWN, LIGHT_BROWN, "Player vs. CPU", False, game_loop)
-        button((WIDTH * 10 + 11)/2 - 50, 450, 100, 50, RED, LIGHT_RED, "Quit", None, quit_game)
+        button((WIDTH * 10 + 11) / 2 - 85, 250, 170, 50, BROWN,
+               LIGHT_BROWN, "Player vs. Player", True, game_loop)
+        button((WIDTH * 10 + 11)/2 - 75, 350, 150, 50, BROWN,
+               LIGHT_BROWN, "Player vs. CPU", False, game_loop)
+        button((WIDTH * 10 + 11)/2 - 50, 450, 100, 50,
+               RED, LIGHT_RED, "Quit", None, quit_game)
 
         pygame.display.update()
         clock.tick(60)
@@ -162,7 +166,8 @@ def game_loop(player_vs_player):
             elif event.type == pygame.MOUSEBUTTONUP:
                 amazons.update_mobility(game_board)
 
-        board.draw_board(game_board, WIDTH, HEIGHT, MARGIN, screen, amazons.get_turn(), player_vs_player)
+        board.draw_board(game_board, WIDTH, HEIGHT, MARGIN,
+                         screen, amazons.get_turn(), player_vs_player)
 
         clock.tick(60)
         pygame.display.flip()

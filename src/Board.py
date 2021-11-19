@@ -5,12 +5,12 @@ class Board:
 
     def __init__(self):
         self.board = [[0 for x in range(10)] for y in range(10)]
-        self.fire = pygame.image.load(r'pictures/fire_arrow.png')
-        self.black = pygame.image.load(r'pictures/black_piece.png')
-        self.white = pygame.image.load(r'pictures/white_piece.png')
-        self.dead_white = pygame.image.load(r'pictures/dead_white_piece.png')
-        self.dead_black = pygame.image.load(r'pictures/dead_black_piece.png')
-        self.first_move = pygame.image.load(r'pictures/first_move.png')
+        self.fire = pygame.image.load(r'pieces/fire_arrow.png')
+        self.black = pygame.image.load(r'pieces/black_piece.png')
+        self.white = pygame.image.load(r'pieces/white_piece.png')
+        self.dead_white = pygame.image.load(r'pieces/dead_white_piece.png')
+        self.dead_black = pygame.image.load(r'pieces/dead_black_piece.png')
+        self.first_move = pygame.image.load(r'pieces/first_move.png')
         self.board_col1 = (190, 160, 160)
         self.board_col2 = (225, 204, 153)
         self.board_col3 = (126, 96, 96)
@@ -95,4 +95,5 @@ class Board:
 
                 pygame.draw.rect(screen, color, [(margin + width) * j + margin,
                                                  (margin + height) * i + margin, width, height])
-        self.draw_objects(board, width, height, margin, screen, turn, player_vs_player)
+        self.draw_objects(board, width, height, margin,
+                          screen, turn, player_vs_player)
