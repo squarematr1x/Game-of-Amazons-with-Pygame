@@ -14,3 +14,6 @@ This was one of my first projects ever (and it shows).
 ### Deciding where to shoot with white amazon:
 ![Deciding where to shoot with white amazon](https://github.com/squarematr1x/Game-of-Amazons-with-Pygame/blob/master/screenshots/screenshot3.PNG?raw=true)
 
+### Libraries:
+* Pygame
+* Tkinter
