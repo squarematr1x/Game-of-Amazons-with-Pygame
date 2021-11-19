@@ -1,6 +1,7 @@
 # Game of Amazons with Pygame
 
-Programming [two-player strategy game](https://en.wikipedia.org/wiki/Game_of_the_Amazons) invented by Walter Zamkauskas with Pygame.
+Programming [two-player strategy game](https://en.wikipedia.org/wiki/Game_of_the_Amazons) invented by Walter Zamkauskas with Pygame. 
+This was one of my first projects ever (and it shows).
 
 ## Features
 * Player vs. player mode
@@ -12,3 +13,4 @@ Programming [two-player strategy game](https://en.wikipedia.org/wiki/Game_of_the
 
 ### Deciding where to shoot with white amazon:
 ![Deciding where to shoot with white amazon](https://github.com/squarematr1x/Game-of-Amazons-with-Pygame/blob/master/screenshots/screenshot3.PNG?raw=true)
+
